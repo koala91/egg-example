@@ -13,4 +13,5 @@ module.exports = app => {
   router.post('/users', controller.user.create) // 用户注册
   router.post('/users/login', controller.user.login ) // 用户登录
   router.get('/user', auth, controller.user.getCurrent) // 当前登录用户信息
+  router.patch('/user', auth, controller.user.update) // 更新用户信息
 };
